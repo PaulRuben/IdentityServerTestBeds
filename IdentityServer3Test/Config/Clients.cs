@@ -33,7 +33,7 @@
                     },
 
                     AllowAccessToAllScopes = true,
-                    AccessTokenLifetime = 60
+                    AccessTokenLifetime = 70
                 }
             };
         }
