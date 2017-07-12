@@ -1,4 +1,4 @@
-﻿namespace Api
+﻿namespace Api3
 {
     using IdentityServer3.AccessTokenValidation;
     using Microsoft.Owin.Cors;
