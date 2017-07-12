@@ -55,11 +55,10 @@ namespace Api3_2
 
             app.UseIdentityServerAuthentication(new IdentityServerAuthenticationOptions
             {
-                Authority = "https://localhost:44300", // Changed from http://localhost:5000 to https://localhost:44300 to verify that a .NET Core app can use IdentityServer3 in place of IdentityServer4
+                Authority = "https://localhost:44300", // This is an IdentityServer3 authorization server
                 RequireHttpsMetadata = false,
                 EnableCaching = false,
-                LegacyAudienceValidation = true,
-                ApiName = "api3_2",
+                LegacyAudienceValidation = true, // Because are API on .NET Core and using the IdentityServer4.AccessTokenValidation package, we must turn on legacy validation.  Otherwise we will get an Invalid Audience conflict in our Bearer Token.
             });
 
             app.UseMvc();

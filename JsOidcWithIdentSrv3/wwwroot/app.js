@@ -13,8 +13,8 @@ var config = {
     // these two will be done dynamically from the buttons clicked, but are
     // needed if you want to use the silent_renew
     response_type: "id_token token",
-  //  scope: "openid profile email api1 api2.read_only",
-    scope: "openid profile email api api3_2",
+
+    scope: "openid profile email api",
 
     // this will toggle if profile endpoint is used
     loadUserInfo: true,
@@ -121,6 +121,14 @@ function revoke() {
 }
 
 function callApi() {
+    callProtectedApi("http://localhost:60136/values");
+}
+
+function callApi2() {
+    callProtectedApi("http://localhost:13334/Identity");
+}
+
+function callProtectedApi(url) {
     mgr.getUser().then(function (user) {
         var xhr = new XMLHttpRequest();
         xhr.onload = function (e) {
@@ -135,11 +143,10 @@ function callApi() {
                 display("#ajax-result", xhr.response);
             }
         };
- //       xhr.open("GET", "http://localhost:60136/values", true);  // Api3 .NET Framework API
-        xhr.open("GET", "http://localhost:13334/Identity", true);  // Api3_2 .NET Core API
+        xhr.open("GET", url, true); 
         xhr.setRequestHeader("Authorization", "Bearer " + user.access_token);
         xhr.send();
-    });
+    }); 
 }
 
 if (window.location.hash) {
@@ -153,5 +160,6 @@ if (window.location.hash) {
 });
 
 document.querySelector(".call").addEventListener("click", callApi, false);
+document.querySelector(".call2").addEventListener("click", callApi2, false);
 document.querySelector(".revoke").addEventListener("click", revoke, false);
 document.querySelector(".logout").addEventListener("click", logout, false);
