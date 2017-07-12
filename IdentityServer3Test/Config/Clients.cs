@@ -34,7 +34,31 @@
 
                     AllowAccessToAllScopes = true,
                     AccessTokenLifetime = 70
+                },
+                new Client
+                {
+                    ClientId = "js_oidc_2",
+                    ClientName = "JavaScript Client",
+                    Flow = Flows.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { "http://localhost:2235/callback.html", "http://localhost:2235/silent.html"},
+                    PostLogoutRedirectUris = { "http://localhost:2235/index.html" },
+                    AllowedCorsOrigins = { "http://localhost:2235" },
+
+                    //AllowedScopes =
+                    //{
+                    //    IdentityServer3.Core.Constants.StandardScopes.OpenId,
+                    //    IdentityServer3.Core.Constants.StandardScopes.Profile,
+                    //    "api"
+                    //},
+                    
+                    AllowAccessToAllScopes = true,
+
+                    RequireConsent = false,
+                    AccessTokenLifetime = 70,
                 }
+
             };
         }
     }
