@@ -128,6 +128,10 @@ function callApi2() {
     callProtectedApi("http://localhost:13334/Identity");
 }
 
+function callApi3() {
+    callProtectedApi("http://localhost:1615/Home/Identity");
+}
+
 function callProtectedApi(url) {
     mgr.getUser().then(function (user) {
         var xhr = new XMLHttpRequest();
@@ -161,5 +165,6 @@ if (window.location.hash) {
 
 document.querySelector(".call").addEventListener("click", callApi, false);
 document.querySelector(".call2").addEventListener("click", callApi2, false);
+document.querySelector(".call3").addEventListener("click", callApi3, false);
 document.querySelector(".revoke").addEventListener("click", revoke, false);
 document.querySelector(".logout").addEventListener("click", logout, false);
