@@ -46,7 +46,8 @@ namespace Api3_2
             app.UseCors(policy =>
             {
                 policy.WithOrigins(
-                    "http://localhost:2235");
+                    "http://localhost:2235", 
+                    "http://localhost:1615");
 
                 policy.AllowAnyHeader();
                 policy.AllowAnyMethod();

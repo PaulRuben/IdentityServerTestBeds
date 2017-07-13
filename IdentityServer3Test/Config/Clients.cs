@@ -57,7 +57,31 @@
 
                     RequireConsent = false,
                     AccessTokenLifetime = 70,
+                },
+                new Client
+                {
+                    ClientId = "mvc_ng",
+                    ClientName = "MVC Angular Client",
+                    Flow = Flows.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { "http://localhost:1615/callback.html", "http://localhost:1615/silent.html"},
+                    PostLogoutRedirectUris = { "http://localhost:1615" },
+                    AllowedCorsOrigins = { "http://localhost:1615" },
+
+                    //AllowedScopes =
+                    //{
+                    //    IdentityServer3.Core.Constants.StandardScopes.OpenId,
+                    //    IdentityServer3.Core.Constants.StandardScopes.Profile,
+                    //    "api"
+                    //},
+                    
+                    AllowAccessToAllScopes = true,
+
+                    RequireConsent = false,
+                    AccessTokenLifetime = 70,
                 }
+                
 
             };
         }
