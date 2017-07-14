@@ -1,10 +1,10 @@
-﻿using Microsoft.Owin;
-using Owin;
+﻿using Owin;
 using System.Web.Http;
 using IdentityServer3.AccessTokenValidation;
+using Microsoft.Owin;
 using Microsoft.Owin.Cors;
 
-[assembly: OwinStartup(typeof(Api3_DotNetFrameworkWebApi.Startup))]
+//[assembly: OwinStartup(typeof(Api3_DotNetFrameworkWebApi.Startup))]
 namespace Api3_DotNetFrameworkWebApi
 {
     public class Startup

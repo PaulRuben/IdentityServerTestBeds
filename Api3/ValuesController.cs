@@ -1,11 +1,7 @@
-﻿using System.Collections.Specialized;
-using System.Linq;
-using System.Security.Claims;
-using System.Web.Http.Results;
+﻿using System.Security.Claims;
 
 namespace Api
 {
-    using System;
     using System.Collections.Generic;
     using System.Web.Http;
 

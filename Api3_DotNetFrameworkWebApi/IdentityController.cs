@@ -3,7 +3,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Web.Http;
 
-namespace Api3_DotNetFrameworkWebApi.Controllers
+namespace Api3_DotNetFrameworkWebApi
 {
     [Route("identity")]
     public class IdentityController : ApiController
