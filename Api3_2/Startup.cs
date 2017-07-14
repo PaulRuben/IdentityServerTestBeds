@@ -47,7 +47,8 @@ namespace Api3_2
             {
                 policy.WithOrigins(
                     "http://localhost:2235", 
-                    "http://localhost:1615");
+                    "http://localhost:1615",
+                    "http://localhost:14482");
 
                 policy.AllowAnyHeader();
                 policy.AllowAnyMethod();

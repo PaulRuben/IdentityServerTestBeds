@@ -80,8 +80,53 @@
 
                     RequireConsent = false,
                     AccessTokenLifetime = 70,
+                },
+                new Client
+                {
+                    ClientId = "mvc_ng_api",
+                    ClientName = "MVC Angular WebApi Client",
+                    Flow = Flows.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { "http://localhost:14482/callback.html", "http://localhost:14482/silent.html"},
+                    PostLogoutRedirectUris = { "http://localhost:14482" },
+                    AllowedCorsOrigins = { "http://localhost:14482" },
+
+                    //AllowedScopes =
+                    //{
+                    //    IdentityServer3.Core.Constants.StandardScopes.OpenId,
+                    //    IdentityServer3.Core.Constants.StandardScopes.Profile,
+                    //    "api"
+                    //},
+                    
+                    AllowAccessToAllScopes = true,
+
+                    RequireConsent = false,
+                    AccessTokenLifetime = 70,
+                },
+                new Client
+                {
+                    ClientId = "mvc_ng_api2",
+                    ClientName = "MVC Angular WebApi Client",
+                    Flow = Flows.Implicit,
+                    AllowAccessTokensViaBrowser = true,
+
+                    RedirectUris = { "http://localhost:14482/callback.html", "http://localhost:14482/silent.html"},
+                    PostLogoutRedirectUris = { "http://localhost:14482" },
+                    AllowedCorsOrigins = { "http://localhost:14482" },
+
+                    //AllowedScopes =
+                    //{
+                    //    IdentityServer3.Core.Constants.StandardScopes.OpenId,
+                    //    IdentityServer3.Core.Constants.StandardScopes.Profile,
+                    //    "api"
+                    //},
+                    
+                    AllowAccessToAllScopes = true,
+
+                    RequireConsent = false,
+                    AccessTokenLifetime = 70,
                 }
-                
 
             };
         }

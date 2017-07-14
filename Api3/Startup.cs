@@ -27,7 +27,7 @@
             // Wire Web API
             var httpConfiguration = new HttpConfiguration();
             httpConfiguration.MapHttpAttributeRoutes();
-            httpConfiguration.Filters.Add(new AuthorizeAttribute());
+            httpConfiguration.Filters.Add(new AuthorizeAttribute()); // Causes all controlls to require authorization
 
             app.UseWebApi(httpConfiguration);
         }
