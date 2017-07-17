@@ -14,7 +14,7 @@ var config = {
     // needed if you want to use the silent_renew
     response_type: "id_token token",
 
-    scope: "openid profile email api",
+    scope: "openid profile email api api2",
 
     // this will toggle if profile endpoint is used
     loadUserInfo: true,

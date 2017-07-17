@@ -1,12 +1,10 @@
-﻿using Owin;
-using System.Web.Http;
-using IdentityServer3.AccessTokenValidation;
-using Microsoft.Owin;
-using Microsoft.Owin.Cors;
-
-//[assembly: OwinStartup(typeof(Api3_DotNetFrameworkWebApi.Startup))]
+﻿//[assembly: OwinStartup(typeof(Api3_DotNetFrameworkWebApi.Startup))]
 namespace Api3_DotNetFrameworkWebApi
 {
+    using IdentityServer3.AccessTokenValidation;
+    using Microsoft.Owin.Cors;
+    using Owin;
+    using System.Web.Http;
     public class Startup
     {
         public void Configuration(IAppBuilder app)
@@ -18,11 +16,12 @@ namespace Api3_DotNetFrameworkWebApi
             app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = "https://localhost:44300",
-                
-                ClientId = "api",
-                ClientSecret = "api-secret",
 
-                RequiredScopes = new[] { "api" }
+                // For access to the introspection endpoint
+                ClientId = "api2",
+                ClientSecret = "api-secret2",
+
+                RequiredScopes = new[] { "api2" }
             });
 
             // web api configuration

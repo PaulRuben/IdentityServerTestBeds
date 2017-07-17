@@ -27,6 +27,20 @@
 
                     Type = ScopeType.Resource
                 },
+                new Scope
+                {
+                    Name = "api2",
+
+                    DisplayName = "Access to API",
+                    Description = "This will grant you access to the API",
+
+                    ScopeSecrets = new List<Secret>
+                    {
+                        new Secret("api-secret2".Sha256())
+                    },
+
+                    Type = ScopeType.Resource
+                },
 
             };
         }
