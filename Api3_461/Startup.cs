@@ -1,9 +1,9 @@
-﻿using System.Web.Http;
-using IdentityServer3.AccessTokenValidation;
+﻿using IdentityServer3.AccessTokenValidation;
 using Microsoft.Owin.Cors;
 using Owin;
+using System.Web.Http;
 
-namespace Api3_DotNetFrameworkWebApi
+namespace Api3_461
 {
     public class Startup
     {

@@ -133,7 +133,8 @@ function callApi3() {
 }
 
 function callApi4() {
-    callProtectedApi("http://localhost:27245/identity");
+   // callProtectedApi("http://localhost:27245/values");
+    callProtectedApi("http://localhost:20046/values");
 }
 
 function callProtectedApi(url) {

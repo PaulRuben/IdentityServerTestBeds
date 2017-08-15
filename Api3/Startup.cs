@@ -1,10 +1,10 @@
-﻿namespace Api3
-{
-    using IdentityServer3.AccessTokenValidation;
-    using Microsoft.Owin.Cors;
-    using Owin;
-    using System.Web.Http;
+﻿using IdentityServer3.AccessTokenValidation;
+using Microsoft.Owin.Cors;
+using Owin;
+using System.Web.Http;
 
+namespace Api3
+{
     public class Startup
     {
         public void Configuration(IAppBuilder app)

@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Security.Claims;
 using System.Web.Http;
 
 namespace Api3_DotNetFrameworkWebApi
 {
-    [Route("identity")]
-    public class IdentityController : ApiController
+    [Route("values")]
+    public class ValuesController : ApiController
     {
         public IEnumerable<string> Get()
         {
@@ -26,22 +24,5 @@ namespace Api3_DotNetFrameworkWebApi
             }
             return nameValues;
         }
-
-        //public IHttpActionResult Get()
-        //{
-        //    var user = User as ClaimsPrincipal;
-        //    if (user == null)
-        //        throw new AccessViolationException();
-
-        //    var claims = from c in user.Claims
-        //        select new
-        //        {
-        //            type = c.Type,
-        //            value = c.Value
-        //        };
-
-        //    return Json(claims);
-        //}
-
     }
 }
